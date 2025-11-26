@@ -144,31 +144,37 @@ export function Book() {
     
     // 마크다운 링크 [text](url)
     const markdownRegex = /\[([^\]]+)\]\(([^)]+)\)/g
-    let match
-    while ((match = markdownRegex.exec(text)) !== null) {
-      matches.push({
-        start: match.index,
-        end: match.index + match[0].length,
-        type: 'markdown',
-        text: match[1],
-        url: match[2]
-      })
+    let markdownMatch: RegExpExecArray | null
+    while ((markdownMatch = markdownRegex.exec(text)) !== null) {
+      if (markdownMatch.index !== undefined) {
+        matches.push({
+          start: markdownMatch.index,
+          end: markdownMatch.index + markdownMatch[0].length,
+          type: 'markdown',
+          text: markdownMatch[1],
+          url: markdownMatch[2]
+        })
+      }
     }
     
     // 일반 URL 패턴 (http://, https://, 또는 도메인.확장자 형식)
     const urlRegex = /(https?:\/\/[^\s\)]+|(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}(?:\/[^\s\)]*)?)/g
-    while ((match = urlRegex.exec(text)) !== null) {
-      // 마크다운 링크 안에 있는 URL은 건너뛰기
-      const isInsideMarkdown = matches.some(m => 
-        m.type === 'markdown' && match.index >= m.start && match.index < m.end
-      )
-      if (!isInsideMarkdown) {
-        matches.push({
-          start: match.index,
-          end: match.index + match[0].length,
-          type: 'url',
-          url: match[0]
-        })
+    let urlMatch: RegExpExecArray | null
+    while ((urlMatch = urlRegex.exec(text)) !== null) {
+      if (urlMatch.index !== undefined) {
+        const urlMatchIndex = urlMatch.index
+        // 마크다운 링크 안에 있는 URL은 건너뛰기
+        const isInsideMarkdown = matches.some(m => 
+          m.type === 'markdown' && urlMatchIndex >= m.start && urlMatchIndex < m.end
+        )
+        if (!isInsideMarkdown) {
+          matches.push({
+            start: urlMatchIndex,
+            end: urlMatchIndex + urlMatch[0].length,
+            type: 'url',
+            url: urlMatch[0]
+          })
+        }
       }
     }
     
@@ -273,7 +279,7 @@ export function Book() {
                             >
                               {subChapter.id} {subChapter.title}
                             </button>
-                            {hasSubSubChapters && isExpanded && (
+                            {hasSubSubChapters && isExpanded && subChapter.subSubChapters && (
                               <div className="ml-4 mt-1 space-y-1">
                                 {subChapter.subSubChapters.map((subSubChapter) => (
                                   <button
