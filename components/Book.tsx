@@ -93,8 +93,28 @@ const chapters: Chapter[] = [
 ]
 
 export function Book() {
-  const [selectedSubChapter, setSelectedSubChapter] = useState<string>(chapters[0].subChapters[0].id)
-  const [expandedSubChapters, setExpandedSubChapters] = useState<Set<string>>(new Set())
+  // 초기 선택: 첫 번째 subChapter에 content가 있으면 그것을, 없으면 첫 번째 subSubChapter를 선택
+  const getInitialSelection = () => {
+    const firstSubChapter = chapters[0].subChapters[0]
+    if (firstSubChapter.content) {
+      return firstSubChapter.id
+    }
+    if (firstSubChapter.subSubChapters && firstSubChapter.subSubChapters.length > 0) {
+      return firstSubChapter.subSubChapters[0].id
+    }
+    return firstSubChapter.id
+  }
+
+  const [selectedSubChapter, setSelectedSubChapter] = useState<string>(getInitialSelection())
+  const [expandedSubChapters, setExpandedSubChapters] = useState<Set<string>>(() => {
+    const initialExpanded = new Set<string>()
+    // If the initially selected sub-chapter has sub-sub-chapters, expand it
+    const defaultSubChapter = chapters[0].subChapters[0]
+    if (defaultSubChapter.subSubChapters && defaultSubChapter.subSubChapters.length > 0) {
+      initialExpanded.add(defaultSubChapter.id)
+    }
+    return initialExpanded
+  })
 
   // 현재 선택된 항목 찾기 (subChapter 또는 subSubChapter)
   const findCurrentContent = () => {
@@ -103,6 +123,11 @@ export function Book() {
         if (subChapter.id === selectedSubChapter) {
           if (subChapter.content) {
             return { title: subChapter.title, content: subChapter.content }
+          }
+          // If a sub-chapter with sub-sub-chapters is selected, but it has no direct content,
+          // return the first sub-sub-chapter's content if available.
+          if (subChapter.subSubChapters && subChapter.subSubChapters.length > 0) {
+            return { title: subChapter.subSubChapters[0].title, content: subChapter.subSubChapters[0].content || '' }
           }
         }
         if (subChapter.subSubChapters) {
@@ -114,7 +139,12 @@ export function Book() {
         }
       }
     }
-    return { title: chapters[0].subChapters[0].title, content: chapters[0].subChapters[0].content || '' }
+    // Fallback to the very first content if nothing is selected or found
+    const defaultSubChapter = chapters[0].subChapters[0];
+    if (defaultSubChapter.subSubChapters && defaultSubChapter.subSubChapters.length > 0) {
+      return { title: defaultSubChapter.subSubChapters[0].title, content: defaultSubChapter.subSubChapters[0].content || '' };
+    }
+    return { title: defaultSubChapter.title, content: defaultSubChapter.content || '' };
   }
 
   const currentContent = findCurrentContent()
@@ -261,10 +291,13 @@ export function Book() {
                         return (
                           <div key={subChapter.id}>
                             <button
-                              onClick={() => {
+                              onClick={(e) => {
+                                e.preventDefault()
+                                e.stopPropagation()
                                 if (hasSubSubChapters) {
+                                  const newExpanded = !isExpanded
                                   toggleSubChapter(subChapter.id)
-                                  if (!isExpanded && subChapter.subSubChapters) {
+                                  if (newExpanded && subChapter.subSubChapters && subChapter.subSubChapters.length > 0) {
                                     setSelectedSubChapter(subChapter.subSubChapters[0].id)
                                   }
                                 } else {
@@ -274,6 +307,8 @@ export function Book() {
                               className={`w-full text-left px-4 py-2 rounded-lg transition-all text-sm ${
                                 selectedSubChapter === subChapter.id && !hasSubSubChapters
                                   ? 'bg-indigo-600 text-white font-semibold'
+                                  : hasSubSubChapters
+                                  ? 'bg-gray-100 text-gray-700 hover:bg-gray-200 font-semibold'
                                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                               }`}
                             >
@@ -284,7 +319,11 @@ export function Book() {
                                 {subChapter.subSubChapters.map((subSubChapter) => (
                                   <button
                                     key={subSubChapter.id}
-                                    onClick={() => setSelectedSubChapter(subSubChapter.id)}
+                                    onClick={(e) => {
+                                      e.preventDefault()
+                                      e.stopPropagation()
+                                      setSelectedSubChapter(subSubChapter.id)
+                                    }}
                                     className={`w-full text-left px-4 py-2 rounded-lg transition-all text-xs ${
                                       selectedSubChapter === subSubChapter.id
                                         ? 'bg-indigo-600 text-white font-semibold'
