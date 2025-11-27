@@ -115,23 +115,41 @@
         }
         
         /* 모바일 반응형 스타일 */
+        /* 모바일 반응형 스타일 */
         @media (max-width: 768px) {
+            
             /* 히어로 섹션 모바일 최적화 */
             .hero {
-                padding-top: 4.5rem !important;
+                padding-top: 15rem !important;
+                margin-top: 5rem !important;
                 padding-bottom: 2rem !important;
                 padding-left: 0 !important;
                 padding-right: 0 !important;
                 overflow: visible !important;
                 min-height: auto !important;
                 height: auto !important;
-                scroll-margin-top: 80px !important;
-                margin-top: 0 !important;
+                scroll-margin-top: 150px !important;
             }
             
-            /* 모바일에서 버튼 숨기기 */
-            .hero-buttons {
+            /* 모바일에서 히어로 버튼 작게 만들고 한 줄로 표시 */
+            /* 모바일에서 히어로 버튼 완전히 숨기기 */
+            .hero-buttons,
+            .hero-buttons *,
+            .hero-content .hero-buttons,
+            .hero-content .btn,
+            .hero-content a.btn,
+            a.btn.btn-primary {
                 display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                overflow: hidden !important;
+                pointer-events: none !important;
+                position: absolute !important;
+                left: -9999px !important;
+                margin: 0 !important;
+                padding: 0 !important;
             }
             
             .hero-container {
@@ -146,21 +164,36 @@
                 display: flex !important;
             }
             
-            /* 모바일에서 비주얼을 먼저 표시 */
-            .hero-visual {
-                order: 1 !important;
-            }
-            
-            /* 모바일에서 텍스트를 아래로 이동 */
+            /* 모바일에서 텍스트를 먼저 표시 */
             .hero-content {
-                order: 2 !important;
+                order: 1 !important;
                 width: 100% !important;
                 max-width: 100% !important;
                 text-align: center !important;
-                padding: 0.75rem 0.5rem !important;
+                padding: 2rem 0.5rem !important;
+                padding-top: 3rem !important;
                 overflow: visible !important;
                 margin: 0 !important;
+                margin-top: 2rem !important;
                 box-sizing: border-box !important;
+            }
+            
+            /* 모바일에서 비주얼(로봇) 완전히 숨기기 */
+            .hero-visual,
+            .hero-visual *,
+            .code-window,
+            .code-window * {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                overflow: hidden !important;
+                pointer-events: none !important;
+                position: absolute !important;
+                left: -9999px !important;
+                margin: 0 !important;
+                padding: 0 !important;
             }
             
             .hero-title {
@@ -288,18 +321,34 @@
         }
         
         @media (max-width: 480px) {
+            
             .hero {
-                padding-top: 4rem !important;
+                padding-top: 14rem !important;
                 padding-bottom: 1.5rem !important;
                 padding-left: 0 !important;
                 padding-right: 0 !important;
-                scroll-margin-top: 70px !important;
-                margin-top: 0 !important;
+                scroll-margin-top: 140px !important;
+                margin-top: 5rem !important;
             }
             
-            /* 작은 모바일에서도 버튼 숨기기 */
-            .hero-buttons {
+            /* 작은 모바일에서도 히어로 버튼 완전히 숨기기 */
+            .hero-buttons,
+            .hero-buttons *,
+            .hero-content .hero-buttons,
+            .hero-content .btn,
+            .hero-content a.btn,
+            a.btn.btn-primary {
                 display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                overflow: hidden !important;
+                pointer-events: none !important;
+                position: absolute !important;
+                left: -9999px !important;
+                margin: 0 !important;
+                padding: 0 !important;
             }
             
             .hero-container {
@@ -308,17 +357,35 @@
                 display: flex !important;
             }
             
-            /* 작은 모바일에서도 비주얼을 먼저, 텍스트를 아래로 */
-            .hero-visual {
+            /* 작은 모바일에서도 텍스트를 먼저, 비주얼을 아래로 */
+            .hero-content {
                 order: 1 !important;
+                margin-top: 1rem !important;
+                padding: 1rem 0.5rem !important;
+            }
+            
+            /* 작은 모바일에서도 비주얼(로봇) 완전히 숨기기 */
+            .hero-visual,
+            .hero-visual *,
+            .code-window,
+            .code-window * {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                height: 0 !important;
+                width: 0 !important;
+                overflow: hidden !important;
+                pointer-events: none !important;
+                position: absolute !important;
+                left: -9999px !important;
+                margin: 0 !important;
+                padding: 0 !important;
             }
             
             .hero-content {
-                order: 2 !important;
-            }
-            
-            .hero-content {
-                padding: 0.5rem 0.25rem !important;
+                padding: 2rem 0.25rem !important;
+                padding-top: 3rem !important;
+                margin-top: 2rem !important;
             }
             
             .hero-title {
@@ -417,12 +484,19 @@
                 <p class="hero-description">
                     이론이 아닌 실전 경험을 통해 AI로 돈을 버는 구체적인 전략과 노하우를 전수합니다.
                 </p>
-                <div class="hero-buttons">
+                <div class="hero-buttons" id="hero-buttons-container">
                     <a href="#features" class="btn btn-primary">
                         <i class="fas fa-play"></i>
                         지금 시작하기
                     </a>
                 </div>
+                <style>
+                    @media (max-width: 768px) {
+                        #hero-buttons-container {
+                            display: none !important;
+                        }
+                    }
+                </style>
             </div>
             <div class="hero-visual">
                 <div class="code-window">
@@ -695,6 +769,128 @@
         </div>
     </footer>
 
+    <script>
+        // DOM이 완전히 로드된 후 실행
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 모바일에서 히어로 버튼 스타일 조정 (CSS로 처리하므로 함수 제거)
+            
+            // 모바일에서 히어로 비주얼(로봇) 숨기기
+            function hideHeroVisual() {
+                const heroVisual = document.querySelector('.hero-visual');
+                const codeWindow = document.querySelector('.code-window');
+                
+                if (window.innerWidth <= 768) {
+                    [heroVisual, codeWindow].forEach(element => {
+                        if (element) {
+                            element.style.setProperty('display', 'none', 'important');
+                            element.style.setProperty('visibility', 'hidden', 'important');
+                            element.style.setProperty('opacity', '0', 'important');
+                            element.style.setProperty('height', '0', 'important');
+                            element.style.setProperty('width', '0', 'important');
+                            element.style.setProperty('overflow', 'hidden', 'important');
+                            element.style.setProperty('pointer-events', 'none', 'important');
+                            element.style.setProperty('position', 'absolute', 'important');
+                            element.style.setProperty('left', '-9999px', 'important');
+                        }
+                    });
+                } else {
+                    [heroVisual, codeWindow].forEach(element => {
+                        if (element) {
+                            element.style.removeProperty('display');
+                            element.style.removeProperty('visibility');
+                            element.style.removeProperty('opacity');
+                            element.style.removeProperty('height');
+                            element.style.removeProperty('width');
+                            element.style.removeProperty('overflow');
+                            element.style.removeProperty('pointer-events');
+                            element.style.removeProperty('position');
+                            element.style.removeProperty('left');
+                        }
+                    });
+                }
+            }
+            
+            // 모바일에서 히어로 버튼 숨기기
+            function hideHeroButtons() {
+                const heroButtons = document.querySelector('.hero-buttons');
+                const heroBtns = document.querySelectorAll('.hero-content .btn, .hero-content a.btn, a.btn.btn-primary');
+                
+                if (window.innerWidth <= 768) {
+                    if (heroButtons) {
+                        heroButtons.style.setProperty('display', 'none', 'important');
+                        heroButtons.style.setProperty('visibility', 'hidden', 'important');
+                        heroButtons.style.setProperty('opacity', '0', 'important');
+                        heroButtons.style.setProperty('height', '0', 'important');
+                        heroButtons.style.setProperty('width', '0', 'important');
+                        heroButtons.style.setProperty('overflow', 'hidden', 'important');
+                        heroButtons.style.setProperty('pointer-events', 'none', 'important');
+                        heroButtons.style.setProperty('position', 'absolute', 'important');
+                        heroButtons.style.setProperty('left', '-9999px', 'important');
+                    }
+                    heroBtns.forEach(btn => {
+                        if (btn) {
+                            btn.style.setProperty('display', 'none', 'important');
+                            btn.style.setProperty('visibility', 'hidden', 'important');
+                            btn.style.setProperty('opacity', '0', 'important');
+                        }
+                    });
+                } else {
+                    if (heroButtons) {
+                        heroButtons.style.removeProperty('display');
+                        heroButtons.style.removeProperty('visibility');
+                        heroButtons.style.removeProperty('opacity');
+                        heroButtons.style.removeProperty('height');
+                        heroButtons.style.removeProperty('width');
+                        heroButtons.style.removeProperty('overflow');
+                        heroButtons.style.removeProperty('pointer-events');
+                        heroButtons.style.removeProperty('position');
+                        heroButtons.style.removeProperty('left');
+                    }
+                    heroBtns.forEach(btn => {
+                        if (btn) {
+                            btn.style.removeProperty('display');
+                            btn.style.removeProperty('visibility');
+                            btn.style.removeProperty('opacity');
+                        }
+                    });
+                }
+            }
+            
+            // 히어로 섹션 텍스트가 보이도록 상단 여백 조정
+            function adjustHeroPadding() {
+                const hero = document.querySelector('.hero');
+                if (hero) {
+                    if (window.innerWidth <= 480) {
+                        hero.style.setProperty('padding-top', '14rem', 'important');
+                        hero.style.setProperty('margin-top', '5rem', 'important');
+                    } else if (window.innerWidth <= 768) {
+                        hero.style.setProperty('padding-top', '15rem', 'important');
+                        hero.style.setProperty('margin-top', '5rem', 'important');
+                    }
+                }
+            }
+            
+            // 즉시 실행
+            hideHeroVisual();
+            hideHeroButtons();
+            adjustHeroPadding();
+            
+            // 리사이즈 시에도 실행
+            window.addEventListener('resize', function() {
+                hideHeroVisual();
+                hideHeroButtons();
+                adjustHeroPadding();
+            });
+            
+            // 추가 안전장치: 약간의 지연 후 다시 실행
+            setTimeout(function() {
+                hideHeroVisual();
+                hideHeroButtons();
+                adjustHeroPadding();
+            }, 100);
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
