@@ -15,7 +15,7 @@ export function Navbar() {
         </Link>
         <ul className="hidden md:flex list-none gap-8">
           <li>
-            <Link href="#ebook" className="text-gray-800 font-medium transition-colors hover:text-indigo-600">
+            <Link href="/#ebook" className="text-gray-800 font-medium transition-colors hover:text-indigo-600">
               전자책
             </Link>
           </li>
@@ -42,7 +42,7 @@ export function Navbar() {
       {isMenuOpen && (
         <ul className="md:hidden absolute top-20 left-0 w-full bg-white border-b border-gray-200 py-5 flex flex-col items-center gap-5">
           <li>
-            <Link href="#ebook" className="text-gray-800 font-medium hover:text-indigo-600" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/#ebook" className="text-gray-800 font-medium hover:text-indigo-600" onClick={() => setIsMenuOpen(false)}>
               전자책
             </Link>
           </li>
