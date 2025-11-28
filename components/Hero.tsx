@@ -25,7 +25,7 @@ export function Hero() {
               전자책 바로가기
             </a>
             <a
-              href="#design"
+              href="/design"
               className="px-8 py-4 bg-white/10 backdrop-blur-md text-white rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               디자인 바로가기

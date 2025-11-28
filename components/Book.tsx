@@ -151,6 +151,145 @@ const chapters: Chapter[] = [
         ]
       }
     ]
+  },
+  {
+    id: 2,
+    title: '홈페이지 디자인',
+    subChapters: [
+      {
+        id: '2-1',
+        title: '디자인 기초 개념',
+        subSubChapters: [
+          {
+            id: '2-1-(1)',
+            title: '(1) UI, UX, CX의 차이',
+            content: '### UI, UX, CX란?\n\n**UI (User Interface - 사용자 인터페이스)**:\n\n- 사용자가 보는 화면의 **시각적 디자인**\n- 버튼, 아이콘, 색상, 레이아웃 등 시각적 요소\n- "**어떻게 보이는가**"에 집중\n- **예시**: 버튼의 색상, 크기, 위치, 폰트 스타일\n\n**UX (User Experience - 사용자 경험)**:\n\n- 사용자가 제품을 **사용하면서 느끼는 전체적인 경험**\n- 사용 편의성, 직관성, 만족도, 효율성 등\n- "**어떻게 느껴지는가**"에 집중\n- **예시**: 버튼을 클릭했을 때의 반응, 페이지 이동의 자연스러움, 작업 완료 시간\n\n**CX (Customer Experience - 고객 경험)**:\n\n- 고객이 브랜드와 **전체적으로 상호작용하는 모든 경험**\n- 제품 사용뿐만 아니라 마케팅, 고객 지원, 구매 과정 등 포함\n- "**전체적인 관계**"에 집중\n- **예시**: 광고를 보고 → 웹사이트 방문 → 제품 구매 → 고객 지원 → 재구매까지의 전체 여정\n\n---\n\n### 세 가지의 관계와 범위\n\n**범위 비교**:\n\n1. **UI (가장 좁은 범위)**:\n   - 화면에 보이는 것만\n   - 디자인 요소에 집중\n   - 예: 버튼이 파란색인가?\n\n2. **UX (중간 범위)**:\n   - 제품 사용 전체 경험\n   - UI를 포함하지만 더 넓은 개념\n   - 예: 버튼을 눌렀을 때 원하는 결과가 나오는가?\n\n3. **CX (가장 넓은 범위)**:\n   - 브랜드와의 모든 상호작용\n   - UX를 포함하지만 훨씬 더 넓은 개념\n   - 예: 제품을 사용한 후에도 브랜드를 좋아하는가?\n\n**관계도**:\n\n```\nCX (고객 경험)\n  └─ UX (사용자 경험)\n      └─ UI (사용자 인터페이스)\n```\n\n- **UI는 UX의 일부**\n- **UX는 CX의 일부**\n- 각각이 상위 개념의 기반이 됨\n\n---\n\n### 구체적인 예시로 이해하기\n\n**온라인 쇼핑몰 예시**:\n\n**UI (인터페이스)**:\n- 상품 이미지가 선명하게 보이는가?\n- "구매하기" 버튼이 눈에 잘 띄는가?\n- 색상 조합이 조화로운가?\n- 폰트가 읽기 쉬운가?\n\n**UX (사용 경험)**:\n- 상품을 쉽게 찾을 수 있는가?\n- 결제 과정이 간단한가?\n- 페이지 로딩이 빠른가?\n- 오류 메시지가 명확한가?\n- 모바일에서도 잘 작동하는가?\n\n**CX (고객 경험)**:\n- 광고가 마음에 드는가?\n- 배송이 빠른가?\n- 포장이 깔끔한가?\n- 고객 지원이 친절한가?\n- 반품/교환이 쉬운가?\n- 다음에도 이 브랜드를 이용하고 싶은가?\n\n---\n\n### 각각의 중요성\n\n**1. UI (시각적 디자인)**:\n\n- **역할**: 첫인상 결정\n- **영향**: 사용자가 제품을 사용할지 결정하는 첫 단계\n- **중요성**: ⭐⭐⭐ (중요하지만 혼자서는 부족)\n\n**2. UX (사용 경험)**:\n\n- **역할**: 실제 사용 만족도 결정\n- **영향**: 사용자가 제품을 계속 사용할지 결정\n- **중요성**: ⭐⭐⭐⭐⭐ (매우 중요, 핵심)\n\n**3. CX (고객 경험)**:\n\n- **역할**: 브랜드 충성도 결정\n- **영향**: 고객이 재구매하고 추천할지 결정\n- **중요성**: ⭐⭐⭐⭐⭐ (비즈니스 성공의 핵심)\n\n---\n\n### 실무에서의 적용\n\n**디자이너/개발자 관점**:\n\n- **UI 디자이너**: 시각적 디자인에 집중\n- **UX 디자이너**: 사용자 여정, 사용성 연구에 집중\n- **CX 디자이너/매니저**: 전체 고객 여정, 브랜드 경험에 집중\n\n**작업 순서**:\n\n1. **UI 설계**: 화면이 어떻게 보일지 디자인\n2. **UX 개선**: 사용자가 쉽게 사용할 수 있도록 개선\n3. **CX 최적화**: 전체 고객 경험을 최적화하여 충성도 향상\n\n**성공의 핵심**:\n\n- 좋은 UI → 좋은 UX → 좋은 CX\n- 각 단계가 다음 단계의 기반이 됨\n- 모두 중요하지만, **최종 목표는 CX**\n\n---\n\n### 디자인 원칙 (UI/UX 공통)\n\n1. **일관성 (Consistency)**:\n   - 같은 기능은 같은 방식으로 표시\n   - 색상, 폰트, 간격 등 일관된 스타일 유지\n\n2. **단순성 (Simplicity)**:\n   - 불필요한 요소 제거\n   - 명확하고 간결한 디자인\n\n3. **가시성 (Visibility)**:\n   - 중요한 정보는 눈에 잘 띄게\n   - 계층 구조를 명확히\n\n4. **피드백 (Feedback)**:\n   - 사용자 행동에 대한 즉각적인 반응\n   - 버튼 클릭, 로딩 상태 등\n\n5. **오류 방지 (Error Prevention)**:\n   - 실수를 방지하는 디자인\n   - 확인 메시지, 유효성 검사 등'
+          },
+          {
+            id: '2-1-(2)',
+            title: '(2) 디자인 시스템 이해하기',
+            content: '### 디자인 시스템이란?\n\n디자인 시스템은 일관된 디자인을 만들기 위한 규칙과 컴포넌트의 모음입니다.\n\n**주요 구성 요소**:\n\n1. **색상 팔레트 (Color Palette)**:\n   - 주요 색상, 보조 색상, 중립 색상\n   - 예시: Primary, Secondary, Success, Error, Warning\n\n2. **타이포그래피 (Typography)**:\n   - 폰트 패밀리, 크기, 두께, 줄 간격\n   - 제목, 본문, 캡션 등 스타일 정의\n\n3. **간격 시스템 (Spacing System)**:\n   - 요소 간 일관된 간격\n   - 예시: 4px, 8px, 16px, 24px, 32px 단위\n\n4. **컴포넌트 라이브러리**:\n   - 버튼, 입력 필드, 카드 등 재사용 가능한 UI 요소\n\n5. **아이콘 시스템**:\n   - 일관된 아이콘 스타일과 크기\n\n---\n\n### 왜 디자인 시스템이 필요한가?\n\n- **일관성**: 모든 페이지에서 동일한 스타일 유지\n- **효율성**: 재사용 가능한 컴포넌트로 빠른 개발\n- **확장성**: 새로운 기능 추가 시 기존 스타일 활용\n- **협업**: 디자이너와 개발자 간 명확한 가이드라인\n\n---\n\n### 인기 있는 디자인 시스템\n\n1. **Material Design (구글)**:\n   - Material UI, Flutter 등에서 사용\n   - 명확한 그림자와 깊이감\n\n2. **Ant Design**:\n   - 엔터프라이즈급 컴포넌트\n   - React, Vue 등에서 사용\n\n3. **Tailwind CSS**:\n   - 유틸리티 기반 CSS 프레임워크\n   - 빠른 스타일링 가능\n\n4. **shadcn/ui**:\n   - React 컴포넌트 라이브러리\n   - 커스터마이징이 쉬움'
+          }
+        ]
+      },
+      {
+        id: '2-2',
+        title: '레이아웃 설계',
+        subSubChapters: [
+          {
+            id: '2-2-(1)',
+            title: '(1) 그리드 시스템',
+            content: '### 그리드 시스템이란?\n\n그리드 시스템은 페이지를 일정한 간격의 열(column)과 행(row)으로 나누어 레이아웃을 구성하는 방법입니다.\n\n**주요 개념**:\n\n1. **컨테이너 (Container)**:\n   - 콘텐츠를 감싸는 최대 너비\n   - 예시: 1200px, 1440px\n\n2. **열 (Columns)**:\n   - 페이지를 세로로 나눈 단위\n   - 일반적으로 12열 또는 16열 사용\n\n3. **간격 (Gutter)**:\n   - 열 사이의 공간\n   - 예시: 16px, 24px, 32px\n\n4. **여백 (Margin)**:\n   - 컨테이너 양쪽의 공간\n\n---\n\n### 그리드 시스템의 장점\n\n- **일관성**: 모든 요소가 정렬되어 깔끔한 디자인\n- **반응형**: 화면 크기에 따라 열 수 조정 가능\n- **효율성**: 빠르고 체계적인 레이아웃 구성\n- **유지보수**: 구조가 명확하여 수정이 쉬움\n\n---\n\n### Tailwind CSS 그리드 활용\n\n```html\n<!-- 12열 그리드 시스템 -->\n<div class="grid grid-cols-12 gap-4">\n  <div class="col-span-12 md:col-span-6 lg:col-span-4">\n    <!-- 콘텐츠 -->\n  </div>\n  <div class="col-span-12 md:col-span-6 lg:col-span-4">\n    <!-- 콘텐츠 -->\n  </div>\n  <div class="col-span-12 md:col-span-6 lg:col-span-4">\n    <!-- 콘텐츠 -->\n  </div>\n</div>\n```\n\n**반응형 브레이크포인트**:\n\n- **모바일**: 기본 (col-span-12 = 전체 너비)\n- **태블릿**: md: (768px 이상)\n- **데스크톱**: lg: (1024px 이상)\n- **대형 화면**: xl: (1280px 이상)'
+          },
+          {
+            id: '2-2-(2)',
+            title: '(2) 레이아웃 패턴',
+            content: '### 주요 레이아웃 패턴\n\n**1. 헤더-본문-푸터 (Header-Content-Footer)**:\n\n- 가장 기본적인 레이아웃\n- 헤더: 네비게이션, 로고\n- 본문: 주요 콘텐츠\n- 푸터: 연락처, 링크\n\n**2. 사이드바 레이아웃**:\n\n- 왼쪽 또는 오른쪽에 고정 사이드바\n- 본문과 함께 스크롤\n- 대시보드, 관리자 페이지에 적합\n\n**3. 카드 그리드 레이아웃**:\n\n- 여러 카드를 그리드로 배치\n- 블로그, 포트폴리오, 상품 목록에 적합\n\n**4. 히어로 섹션 (Hero Section)**:\n\n- 페이지 상단의 큰 배너 영역\n- 강력한 시각적 임팩트\n- CTA(Call-to-Action) 버튼 포함\n\n**5. 풀스크린 레이아웃**:\n\n- 화면 전체를 활용\n- 단일 메시지에 집중\n- 랜딩 페이지에 적합\n\n---\n\n### 레이아웃 설계 원칙\n\n1. **시각적 계층 구조**:\n   - 중요한 요소는 크게, 눈에 띄게\n   - 제목 > 부제목 > 본문 순서\n\n2. **여백 활용**:\n   - 충분한 여백으로 가독성 향상\n   - 요소 간 간격 일관성 유지\n\n3. **균형감**:\n   - 좌우 대칭 또는 비대칭 균형\n   - 시각적 무게 분산\n\n4. **F 패턴**:\n   - 사용자의 시선 흐름 고려\n   - 왼쪽 상단에서 시작하여 아래로, 오른쪽으로 이동'
+          }
+        ]
+      },
+      {
+        id: '2-3',
+        title: '색상과 타이포그래피',
+        subSubChapters: [
+          {
+            id: '2-3-(1)',
+            title: '(1) 색상 이론',
+            content: '### 색상의 기본 개념\n\n**색상의 3요소**:\n\n1. **색상 (Hue)**:\n   - 빨강, 파랑, 노랑 등 색의 종류\n   - 색상환에서의 위치\n\n2. **채도 (Saturation)**:\n   - 색의 선명도\n   - 높을수록 선명, 낮을수록 회색에 가까움\n\n3. **명도 (Brightness/Lightness)**:\n   - 색의 밝기\n   - 높을수록 밝음, 낮을수록 어두움\n\n---\n\n### 색상 팔레트 구성\n\n**1. 주요 색상 (Primary Color)**:\n\n- 브랜드의 대표 색상\n- 버튼, 링크, 강조 요소에 사용\n- 예시: 인디고, 파랑, 초록\n\n**2. 보조 색상 (Secondary Color)**:\n\n- 주요 색상을 보완하는 색상\n- 다양성과 시각적 흥미 제공\n\n**3. 중립 색상 (Neutral Colors)**:\n\n- 배경, 텍스트에 사용\n- 흰색, 회색, 검정 계열\n- 예시: gray-50, gray-100, gray-900\n\n**4. 의미 색상 (Semantic Colors)**:\n\n- 성공: 초록 (green)\n- 경고: 노랑 (yellow)\n- 오류: 빨강 (red)\n- 정보: 파랑 (blue)\n\n---\n\n### 색상 조합 팁\n\n1. **대비 (Contrast)**:\n   - 텍스트와 배경의 대비 충분히 확보\n   - 접근성 기준: 최소 4.5:1 (WCAG AA)\n\n2. **색상 수 제한**:\n   - 너무 많은 색상 사용 지양\n   - 2-3개의 주요 색상으로 통일\n\n3. **색상 도구 활용**:\n   - [Coolors.co](https://coolors.co/): 색상 팔레트 생성\n   - [Adobe Color](https://color.adobe.com/): 색상 조합 도구\n   - [Tailwind Colors](https://tailwindcss.com/docs/customizing-colors): Tailwind 기본 색상\n\n---\n\n### 다크 모드 고려사항\n\n- 배경과 텍스트 색상 반전\n- 색상 채도 조정 필요\n- 대비 유지하여 가독성 확보'
+          },
+          {
+            id: '2-3-(2)',
+            title: '(2) 타이포그래피',
+            content: '### 타이포그래피 기본\n\n**폰트 선택 원칙**:\n\n1. **가독성**:\n   - 본문은 읽기 쉬운 폰트\n   - 제목은 눈에 띄는 폰트\n\n2. **일관성**:\n   - 전체 사이트에서 동일한 폰트 패밀리 사용\n   - 최대 2-3개의 폰트 패밀리 권장\n\n3. **웹폰트**:\n   - Google Fonts, Adobe Fonts 등 활용\n   - 로딩 속도 고려\n\n---\n\n### 폰트 계층 구조\n\n**1. 제목 (Headings)**:\n\n- **H1**: 페이지 메인 제목 (가장 큼)\n- **H2**: 섹션 제목\n- **H3**: 하위 섹션 제목\n- **H4-H6**: 더 작은 제목\n\n**2. 본문 (Body Text)**:\n\n- 일반 텍스트\n- 16px 이상 권장 (가독성)\n- 줄 간격(line-height): 1.5-1.75\n\n**3. 캡션 (Caption)**:\n\n- 작은 설명 텍스트\n- 12-14px\n\n---\n\n### 폰트 스타일\n\n**1. 폰트 두께 (Font Weight)**:\n\n- **Light (300)**: 얇은 텍스트\n- **Regular (400)**: 일반 텍스트\n- **Medium (500)**: 중간 두께\n- **Bold (700)**: 굵은 텍스트\n- **Black (900)**: 매우 굵은 텍스트\n\n**2. 폰트 스타일**:\n\n- **Normal**: 일반\n- **Italic**: 기울임\n- **Underline**: 밑줄\n\n---\n\n### 한국어 폰트 추천\n\n1. **Noto Sans KR**:\n   - Google Fonts 제공\n   - 가독성 우수\n   - 무료 사용 가능\n\n2. **Pretendard**:\n   - 현대적인 한국어 폰트\n   - 웹 최적화\n   - 오픈소스\n\n3. **나눔고딕**:\n   - 널리 사용되는 폰트\n   - 깔끔한 디자인\n\n---\n\n### Tailwind CSS 타이포그래피\n\n```html\n<h1 class="text-4xl font-bold text-gray-900">제목</h1>\n<p class="text-lg text-gray-700 leading-relaxed">본문 텍스트</p>\n```\n\n**주요 클래스**:\n\n- `text-xs` ~ `text-6xl`: 폰트 크기\n- `font-thin` ~ `font-black`: 폰트 두께\n- `leading-tight` ~ `leading-loose`: 줄 간격\n- `tracking-tight` ~ `tracking-wide`: 자간'
+          }
+        ]
+      },
+      {
+        id: '2-4',
+        title: '컴포넌트 디자인',
+        subSubChapters: [
+          {
+            id: '2-4-(1)',
+            title: '(1) 버튼 디자인',
+            content: '### 버튼의 종류\n\n**1. 주요 버튼 (Primary Button)**:\n\n- 가장 중요한 액션\n- 눈에 띄는 색상\n- 예시: "구매하기", "가입하기"\n\n**2. 보조 버튼 (Secondary Button)**:\n\n- 덜 중요한 액션\n- 테두리만 있는 스타일\n- 예시: "취소", "뒤로가기"\n\n**3. 텍스트 버튼 (Text Button)**:\n\n- 가장 덜 강조되는 액션\n- 텍스트만 표시\n- 예시: "더보기", "링크"\n\n**4. 아이콘 버튼**:\n\n- 아이콘만 표시\n- 공간 절약\n- 예시: 좋아요, 공유\n\n---\n\n### 버튼 디자인 원칙\n\n1. **크기**:\n   - 터치하기 쉬운 크기 (최소 44x44px)\n   - 모바일 친화적\n\n2. **상태 표시**:\n   - **Normal**: 기본 상태\n   - **Hover**: 마우스 오버\n   - **Active**: 클릭 중\n   - **Disabled**: 비활성화\n   - **Loading**: 로딩 중\n\n3. **명확한 레이블**:\n   - 버튼의 기능을 명확히 표현\n   - "클릭" 같은 모호한 텍스트 지양\n\n---\n\n### Tailwind CSS 버튼 예시\n\n```html\n<!-- Primary Button -->\n<button class="px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors">\n  확인\n</button>\n\n<!-- Secondary Button -->\n<button class="px-6 py-3 border-2 border-indigo-600 text-indigo-600 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">\n  취소\n</button>\n\n<!-- Text Button -->\n<button class="px-4 py-2 text-indigo-600 hover:text-indigo-800 font-medium">\n  더보기\n</button>\n```'
+          },
+          {
+            id: '2-4-(2)',
+            title: '(2) 카드 디자인',
+            content: '### 카드 컴포넌트\n\n카드는 관련 정보를 그룹화하여 표시하는 컨테이너입니다.\n\n**카드의 구성 요소**:\n\n1. **헤더**:\n   - 제목, 아이콘\n   - 카드의 주제 표시\n\n2. **본문**:\n   - 주요 콘텐츠\n   - 이미지, 텍스트, 리스트 등\n\n3. **푸터**:\n   - 액션 버튼\n   - 추가 정보\n   - 메타데이터\n\n---\n\n### 카드 디자인 원칙\n\n1. **시각적 계층**:\n   - 중요한 정보는 상단에\n   - 명확한 구분선\n\n2. **여백**:\n   - 충분한 패딩\n   - 요소 간 간격 유지\n\n3. **그림자**:\n   - 깊이감 표현\n   - 호버 시 그림자 강화\n\n4. **일관성**:\n   - 같은 타입의 카드는 동일한 스타일\n\n---\n\n### Tailwind CSS 카드 예시\n\n```html\n<div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">\n  <h3 class="text-xl font-bold text-gray-900 mb-2">카드 제목</h3>\n  <p class="text-gray-600 mb-4">카드 내용입니다.</p>\n  <button class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">\n    자세히 보기\n  </button>\n</div>\n```'
+          },
+          {
+            id: '2-4-(3)',
+            title: '(3) 폼 디자인',
+            content: '### 폼 요소 디자인\n\n**1. 입력 필드 (Input Field)**:\n\n- 명확한 레이블\n- 플레이스홀더 텍스트\n- 에러 메시지 표시\n- 성공 상태 피드백\n\n**2. 체크박스/라디오 버튼**:\n\n- 명확한 선택 상태 표시\n- 레이블과 함께 클릭 가능 영역 확대\n\n**3. 드롭다운 (Select)**:\n\n- 많은 옵션 선택 시 사용\n- 검색 기능 추가 고려\n\n**4. 텍스트 영역 (Textarea)**:\n\n- 긴 텍스트 입력\n- 자동 크기 조절 고려\n\n---\n\n### 폼 디자인 원칙\n\n1. **레이블 위치**:\n   - 입력 필드 위 또는 왼쪽\n   - 명확하고 간결한 설명\n\n2. **에러 처리**:\n   - 즉각적인 피드백\n   - 명확한 에러 메시지\n   - 시각적 강조 (빨간색 테두리)\n\n3. **유효성 검사**:\n   - 실시간 검증\n   - 성공 상태 표시\n\n4. **접근성**:\n   - 키보드 네비게이션 지원\n   - 스크린 리더 호환\n\n---\n\n### Tailwind CSS 폼 예시\n\n```html\n<div class="mb-4">\n  <label class="block text-sm font-medium text-gray-700 mb-1">\n    이메일\n  </label>\n  <input \n    type="email" \n    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"\n    placeholder="example@email.com"\n  />\n  <p class="mt-1 text-sm text-red-600">에러 메시지</p>\n</div>\n```'
+          }
+        ]
+      },
+      {
+        id: '2-5',
+        title: '반응형 디자인',
+        subSubChapters: [
+          {
+            id: '2-5-(1)',
+            title: '(1) 모바일 퍼스트',
+            content: '### 모바일 퍼스트 접근법\n\n모바일 퍼스트는 작은 화면부터 디자인하고 점진적으로 큰 화면으로 확장하는 방법입니다.\n\n**장점**:\n\n1. **핵심 기능 집중**:\n   - 작은 화면에서 필수 기능만 표시\n   - 불필요한 요소 제거\n\n2. **성능 최적화**:\n   - 모바일에서 빠른 로딩\n   - 데스크톱에서도 빠름\n\n3. **사용자 경험**:\n   - 모바일 사용자가 많음\n   - 모바일 경험 우선 개선\n\n---\n\n### 반응형 브레이크포인트\n\n**Tailwind CSS 기본 브레이크포인트**:\n\n- **sm**: 640px 이상 (작은 태블릿)\n- **md**: 768px 이상 (태블릿)\n- **lg**: 1024px 이상 (데스크톱)\n- **xl**: 1280px 이상 (대형 데스크톱)\n- **2xl**: 1536px 이상 (초대형 화면)\n\n**사용 예시**:\n\n```html\n<div class="text-sm md:text-base lg:text-lg xl:text-xl">\n  반응형 텍스트\n</div>\n\n<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">\n  <!-- 모바일: 1열, 태블릿: 2열, 데스크톱: 3열 -->\n</div>\n```'
+          },
+          {
+            id: '2-5-(2)',
+            title: '(2) 반응형 레이아웃 기법',
+            content: '### 주요 반응형 기법\n\n**1. 유동 그리드 (Fluid Grid)**:\n\n- 고정 너비 대신 퍼센트 사용\n- 화면 크기에 따라 자동 조절\n\n**2. 유동 이미지 (Fluid Images)**:\n\n- `max-width: 100%` 사용\n- 이미지가 컨테이너를 넘지 않도록\n\n**3. 미디어 쿼리**:\n\n- 화면 크기에 따라 스타일 변경\n- Tailwind CSS가 자동 처리\n\n**4. 플렉스박스/그리드**:\n\n- CSS Flexbox와 Grid 활용\n- 자동으로 요소 배치 조정\n\n---\n\n### 모바일 최적화 팁\n\n1. **터치 타겟 크기**:\n   - 최소 44x44px\n   - 버튼과 링크 충분한 크기\n\n2. **텍스트 크기**:\n   - 모바일에서 최소 16px\n   - 확대 없이 읽을 수 있도록\n\n3. **간격**:\n   - 모바일에서 충분한 여백\n   - 요소 간 터치 오류 방지\n\n4. **네비게이션**:\n   - 햄버거 메뉴 활용\n   - 간단하고 명확한 구조\n\n---\n\n### Tailwind CSS 반응형 예시\n\n```html\n<!-- 반응형 컨테이너 -->\n<div class="container mx-auto px-4 md:px-6 lg:px-8">\n  <!-- 콘텐츠 -->\n</div>\n\n<!-- 반응형 그리드 -->\n<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">\n  <div>아이템 1</div>\n  <div>아이템 2</div>\n  <div>아이템 3</div>\n  <div>아이템 4</div>\n</div>\n\n<!-- 반응형 텍스트 -->\n<h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">\n  반응형 제목\n</h1>\n```'
+          }
+        ]
+      },
+      {
+        id: '2-6',
+        title: 'UI/UX 원칙',
+        subSubChapters: [
+          {
+            id: '2-6-(1)',
+            title: '(1) 사용자 중심 디자인',
+            content: '### 사용자 중심 디자인 (User-Centered Design)\n\n사용자의 needs, wants, limitations을 우선시하는 디자인 접근법입니다.\n\n**핵심 원칙**:\n\n1. **사용자 이해**:\n   - 타겟 사용자 파악\n   - 사용자 페르소나 작성\n   - 사용자 여정(journey) 분석\n\n2. **접근성 (Accessibility)**:\n   - 모든 사용자가 사용 가능하도록\n   - 키보드 네비게이션\n   - 스크린 리더 지원\n   - 색상 대비 충분\n\n3. **직관성**:\n   - 학습 없이 사용 가능\n   - 명확한 시각적 단서\n   - 일관된 패턴\n\n4. **피드백**:\n   - 사용자 행동에 즉각 반응\n   - 로딩 상태 표시\n   - 성공/실패 메시지\n\n---\n\n### 사용자 테스트\n\n**1. 프로토타입 테스트**:\n\n- 실제 사용자에게 테스트\n- 문제점 발견 및 개선\n\n**2. A/B 테스트**:\n\n- 두 가지 버전 비교\n- 데이터 기반 결정\n\n**3. 사용성 테스트**:\n\n- 사용자가 작업 완료하는지 관찰\n- 어려움 파악\n\n---\n\n### 접근성 체크리스트\n\n- [ ] 키보드로 모든 기능 사용 가능\n- [ ] 색상 대비 4.5:1 이상\n- [ ] 이미지에 alt 텍스트\n- [ ] 폼에 레이블 연결\n- [ ] 스크린 리더 테스트\n- [ ] 모바일에서 사용 가능'
+          },
+          {
+            id: '2-6-(2)',
+            title: '(2) 시각적 계층 구조',
+            content: '### 시각적 계층 구조 (Visual Hierarchy)\n\n사용자의 시선을 중요한 정보로 유도하는 디자인 기법입니다.\n\n**구성 요소**:\n\n1. **크기 (Size)**:\n   - 큰 요소가 더 중요하게 인식\n   - 제목 > 부제목 > 본문\n\n2. **색상 (Color)**:\n   - 밝고 선명한 색상이 더 눈에 띔\n   - 대비를 통한 강조\n\n3. **위치 (Position)**:\n   - 상단, 중앙이 더 중요\n   - F 패턴, Z 패턴 활용\n\n4. **여백 (Whitespace)**:\n   - 여백이 많은 요소가 더 강조\n   - 호흡 공간 제공\n\n5. **대비 (Contrast)**:\n   - 배경과의 대비로 강조\n   - 그림자, 테두리 활용\n\n---\n\n### F 패턴과 Z 패턴\n\n**F 패턴**:\n\n- 텍스트가 많은 페이지\n- 왼쪽 상단에서 시작\n- 수평으로 이동 후 아래로\n- 뉴스, 블로그에 적합\n\n**Z 패턴**:\n\n- 액션이 중요한 페이지\n- 왼쪽 상단 → 오른쪽 상단 → 왼쪽 하단 → 오른쪽 하단\n- 랜딩 페이지, 광고에 적합\n\n---\n\n### 계층 구조 적용 팁\n\n1. **제목 스타일**:\n   - H1: 가장 크고 굵게\n   - H2-H6: 점진적으로 작게\n\n2. **CTA 버튼**:\n   - 눈에 띄는 색상\n   - 충분한 크기\n   - 적절한 위치\n\n3. **중요 정보**:\n   - 상단에 배치\n   - 시각적 강조\n   - 여백 활용'
+          }
+        ]
+      },
+      {
+        id: '2-7',
+        title: '디자인 도구',
+        subSubChapters: [
+          {
+            id: '2-7-(1)',
+            title: '(1) 디자인 소프트웨어',
+            content: '### 주요 디자인 도구\n\n**1. Figma**:\n\n- 웹 기반 디자인 도구\n- 협업 기능 강력\n- 프로토타이핑 지원\n- 무료 플랜 제공\n- **추천**: 초보자부터 전문가까지\n\n**2. Adobe XD**:\n\n- Adobe 제품군\n- 프로토타이핑 기능\n- 애니메이션 지원\n- 유료 구독 필요\n\n**3. Sketch**:\n\n- macOS 전용\n- 벡터 기반\n- 플러그인 생태계\n- 유료 구독\n\n**4. Canva**:\n\n- 간단한 디자인 제작\n- 템플릿 풍부\n- 비디자이너도 사용 가능\n- 무료/유료 플랜\n\n---\n\n### Figma 시작하기\n\n**1. 계정 만들기**:\n\n- [figma.com](https://www.figma.com/) 방문\n- 무료 계정 생성\n\n**2. 기본 기능**:\n\n- **Frame**: 아트보드 (화면 크기 설정)\n- **Shape Tools**: 도형 그리기\n- **Text Tool**: 텍스트 추가\n- **Components**: 재사용 가능한 요소\n- **Auto Layout**: 자동 레이아웃\n\n**3. 프로토타이핑**:\n\n- 화면 간 연결\n- 인터랙션 추가\n- 클릭 가능한 프로토타입 제작\n\n---\n\n### 디자인 파일 관리\n\n- **네이밍 규칙**: 명확한 파일명\n- **컴포넌트 라이브러리**: 재사용 요소 정리\n- **스타일 가이드**: 색상, 폰트 정의\n- **버전 관리**: 변경 이력 추적'
+          },
+          {
+            id: '2-7-(2)',
+            title: '(2) AI 디자인 도구',
+            content: '### AI 기반 디자인 도구\n\n**1. V0 (by Vercel)**:\n\n- 텍스트 프롬프트로 UI 생성\n- React 컴포넌트 자동 생성\n- [v0.app](https://v0.app/)\n- **추천**: 빠른 프로토타입 제작\n\n**2. Galileo AI**:\n\n- Figma 플러그인\n- AI로 UI 디자인 생성\n- 빠른 아이디어 구체화\n\n**3. Uizard**:\n\n- 스케치를 코드로 변환\n- AI 기반 디자인 제안\n- 프로토타이핑 도구\n\n**4. Midjourney / DALL-E**:\n\n- 이미지 생성 AI\n- 일러스트, 배경 이미지 제작\n- 디자인 영감 얻기\n\n---\n\n### V0 활용법\n\n**1. 기본 사용**:\n\n- 원하는 UI를 텍스트로 설명\n- 예시: "로그인 폼을 만들어줘"\n- AI가 React 컴포넌트 생성\n\n**2. 스타일 지정**:\n\n- "Tailwind CSS 사용"\n- "모던한 디자인"\n- "다크 모드 지원"\n\n**3. 반복 개선**:\n\n- 생성된 결과를 기반으로 수정 요청\n- "버튼을 더 크게", "색상을 파란색으로"\n\n---\n\n### AI 도구 활용 팁\n\n- **시작점으로 활용**: 완벽한 결과 기대하지 말고 아이디어 얻기\n- **반복 개선**: 여러 번 시도하여 원하는 결과 얻기\n- **코드 확인**: 생성된 코드를 이해하고 수정하기\n- **인간의 판단**: AI 결과를 검토하고 개선하기'
+          }
+        ]
+      },
+      {
+        id: '2-8',
+        title: '참고 사이트 및 벤치마킹',
+        subSubChapters: [
+          {
+            id: '2-8-(1)',
+            title: '(1) 디자인 참고 사이트',
+            content: '### 디자인 영감 사이트\n\n**1. 컴포넌트 벤치마킹**:\n\n- [21st.dev](https://21st.dev/home): 최신 웹 컴포넌트 모음\n- [uiverse.io](https://uiverse.io/): 무료 UI 컴포넌트 코드\n- [shadcn/ui](https://ui.shadcn.com/): React 컴포넌트 라이브러리\n\n**2. 랜딩 페이지**:\n\n- [landing.love](https://www.landing.love/): 랜딩페이지 애니메이션 벤치마킹\n- [saaspo.com](https://saaspo.com/): SaaS 랜딩페이지 사례\n- [godly.website](https://godly.website/): 고품질 웹사이트 모음\n\n**3. 특정 요소**:\n\n- [cta.gallery](https://www.cta.gallery/): CTA 버튼 벤치마킹\n- [supahero.io](https://www.supahero.io/): 히어로 섹션 디자인\n- [footer.design](https://www.footer.design/): 푸터 디자인 모음\n- [navbar.gallery](https://www.navbar.gallery/): 네비게이션 디자인\n\n**4. 레이아웃**:\n\n- [bentogrids.com](https://bentogrids.com/): 레이아웃 벤치마킹\n- [vibedesignlab.net](https://vibedesignlab.net/): 디자인 패턴 모음\n\n**5. 종합 사례**:\n\n- [mobbin.com](https://mobbin.com/): 모바일 앱 UI 사례\n- [awwwards.com](https://www.awwwards.com/): 웹 디자인 어워드\n- [dribbble.com](https://dribbble.com/): 디자이너 포트폴리오\n\n---\n\n### 벤치마킹 방법\n\n1. **수집**:\n   - 좋은 디자인 스크린샷 저장\n   - 북마크로 정리\n\n2. **분석**:\n   - 왜 좋은지 분석\n   - 색상, 레이아웃, 타이포그래피 파악\n\n3. **적용**:\n   - 자신의 프로젝트에 맞게 변형\n   - 단순 복사가 아닌 영감으로 활용\n\n4. **개선**:\n   - 사용자 피드백 반영\n   - 지속적인 개선'
+          },
+          {
+            id: '2-8-(2)',
+            title: '(2) 무료 리소스',
+            content: '### 무료 디자인 리소스\n\n**1. 아이콘**:\n\n- [Heroicons](https://heroicons.com/): Tailwind 제작사 아이콘\n- [Lucide](https://lucide.dev/): 깔끔한 아이콘 세트\n- [Font Awesome](https://fontawesome.com/): 다양한 아이콘 (무료/유료)\n- [Feather Icons](https://feathericons.com/): 미니멀 아이콘\n\n**2. 이미지**:\n\n- [Unsplash](https://unsplash.com/): 고품질 무료 사진\n- [Pexels](https://www.pexels.com/): 무료 스톡 사진\n- [Pixabay](https://pixabay.com/): 무료 이미지 및 벡터\n\n**3. 일러스트**:\n\n- [unDraw](https://undraw.co/): 무료 일러스트\n- [Humaaans](https://www.humaaans.com/): 사람 일러스트\n- [Open Doodles](https://www.opendoodles.com/): 재미있는 일러스트\n\n**4. 폰트**:\n\n- [Google Fonts](https://fonts.google.com/): 무료 웹폰트\n- [Fontshare](https://www.fontshare.com/): 무료 폰트\n- [Pretendard](https://github.com/orioncactus/pretendard): 한국어 폰트\n\n**5. 색상**:\n\n- [Coolors](https://coolors.co/): 색상 팔레트 생성\n- [Adobe Color](https://color.adobe.com/): 색상 조합 도구\n- [Tailwind Colors](https://tailwindcss.com/docs/customizing-colors): 기본 색상 팔레트\n\n**6. UI 킷**:\n\n- [Tailwind UI](https://tailwindui.com/): Tailwind 컴포넌트 (유료/무료)\n- [Headless UI](https://headlessui.com/): 접근성 좋은 컴포넌트\n- [Radix UI](https://www.radix-ui.com/): React 컴포넌트 프리미티브\n\n---\n\n### 리소스 활용 팁\n\n- **라이선스 확인**: 상업적 사용 가능 여부 확인\n- **크기 최적화**: 이미지 압축하여 로딩 속도 개선\n- **일관성**: 같은 스타일의 리소스 사용\n- **커스터마이징**: 기본 리소스를 프로젝트에 맞게 수정'
+          }
+        ]
+      }
+    ]
   }
 ]
 

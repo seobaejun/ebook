@@ -20,7 +20,7 @@ export function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="#design" className="text-gray-800 font-medium transition-colors hover:text-indigo-600">
+            <Link href="/design" className="text-gray-800 font-medium transition-colors hover:text-indigo-600">
               디자인
             </Link>
           </li>
@@ -47,7 +47,7 @@ export function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="#design" className="text-gray-800 font-medium hover:text-indigo-600" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/design" className="text-gray-800 font-medium hover:text-indigo-600" onClick={() => setIsMenuOpen(false)}>
               디자인
             </Link>
           </li>
