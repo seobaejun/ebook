@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import type { CSSProperties } from 'react'
 
 interface BoxConfig {
   width: number
@@ -75,7 +76,7 @@ export function BoxLayout() {
     })
   }
 
-  const getBoxStyle = () => {
+  const getBoxStyle = (): CSSProperties => {
     return {
       width: `${boxConfig.width}px`,
       height: `${boxConfig.height}px`,
@@ -88,12 +89,12 @@ export function BoxLayout() {
       marginBottom: `${boxConfig.marginBottom}px`,
       marginLeft: `${boxConfig.marginLeft}px`,
       borderWidth: `${boxConfig.borderWidth}px`,
-      borderStyle: boxConfig.borderStyle,
+      borderStyle: boxConfig.borderStyle as CSSProperties['borderStyle'],
       borderColor: boxConfig.borderColor,
       borderRadius: `${boxConfig.borderRadius}px`,
       backgroundColor: boxConfig.backgroundColor,
-      display: boxConfig.display,
-      position: boxConfig.position
+      display: boxConfig.display as CSSProperties['display'],
+      position: boxConfig.position as CSSProperties['position']
     }
   }
 
